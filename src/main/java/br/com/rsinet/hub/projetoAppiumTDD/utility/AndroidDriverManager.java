@@ -1,4 +1,4 @@
-package br.com.rsinet.hub.projetoAppiumTDD;
+package br.com.rsinet.hub.projetoAppiumTDD.utility;
 
 import java.net.MalformedURLException;
 import java.net.URL;
