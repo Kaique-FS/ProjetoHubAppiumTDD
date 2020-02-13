@@ -60,4 +60,9 @@ public class ProductScreen {
 		MobileElement txtbx_ConfirmaProduto = driver.findElementById("com.Advantage.aShopping:id/textViewNoProductsToShow");
 		return txtbx_ConfirmaProduto;
 	}
+	
+	public MobileElement Valida_Nome_Produto() {
+		MobileElement txtbx_ValidaNomeProduto = driver.findElementById("com.Advantage.aShopping:id/textViewProductName");
+		return txtbx_ValidaNomeProduto;
+	}
 }

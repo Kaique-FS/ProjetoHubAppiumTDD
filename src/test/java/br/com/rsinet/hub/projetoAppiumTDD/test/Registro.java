@@ -20,9 +20,9 @@ import io.appium.java_client.android.AndroidDriver;
 public class Registro {
 
 	private AndroidDriver<MobileElement> driver;
-	private HomeScreen HP;
-	private LogInScreen LP;
-	private RegisterScreen RP;
+	private HomeScreen HS;
+	private LogInScreen LS;
+	private RegisterScreen RS;
 
 	@Before
 	public void AbreAPlicacao() throws MalformedURLException,InterruptedException {
@@ -30,9 +30,9 @@ public class Registro {
 		AndroidDriverManager.AbreAndroid();
 		driver = AndroidDriverManager.AbreAndroid();
 		
-		HP = new HomeScreen(AndroidDriverManager.AbreAndroid());
-		LP = new LogInScreen(AndroidDriverManager.AbreAndroid());
-		RP = new RegisterScreen(AndroidDriverManager.AbreAndroid());
+		HS = new HomeScreen(AndroidDriverManager.AbreAndroid());
+		LS = new LogInScreen(AndroidDriverManager.AbreAndroid());
+		RS = new RegisterScreen(AndroidDriverManager.AbreAndroid());
 		
 	}
 	
@@ -40,48 +40,48 @@ public class Registro {
 	public void Cadastrar_Usuario() throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
-		HP.bnt_Menu().click();
-		HP.bnt_LogIn().click();
-		LP.Novo_Usuario().click();
+		HS.bnt_Menu().click();
+		HS.bnt_LogIn().click();
+		LS.Novo_Usuario().click();
 		
 		System.out.println("Ele abriu o APP e foi para pagina de cadastro");
 
 		//Detalhes da Conta
-		RP.txtbx_NomeUsuario().sendKeys("kaiquefs");
-		RP.txtbx_Email().sendKeys("kaique@hotmail.com");
-		RP.txtbx_Senha().sendKeys("Kaique1");
-		RP.txtbx_ConfirmarSenha().sendKeys("Kaique1");
+		RS.txtbx_NomeUsuario().sendKeys("kaiquefs");
+		RS.txtbx_Email().sendKeys("kaique@hotmail.com");
+		RS.txtbx_Senha().sendKeys("Kaique1");
+		RS.txtbx_ConfirmarSenha().sendKeys("Kaique1");
 					
-		RP.Rola_Pagina(driver, "PHONE NUMBER");
+		RS.Rola_Pagina(driver, "PHONE NUMBER");
 
 		//Detalhes Pessoais
-		RP.txtbx_PrimeiroNome().sendKeys("Kaique");
-		RP.txtbx_UltimoNome().sendKeys("Silva");
-		RP.txtbx_TelefoneNumero().sendKeys("+55 (11) 99353-6566");
+		RS.txtbx_PrimeiroNome().sendKeys("Kaique");
+		RS.txtbx_UltimoNome().sendKeys("Silva");
+		RS.txtbx_TelefoneNumero().sendKeys("+55 (11) 99353-6566");
 						
-		RP.Rola_Pagina(driver, "REGISTER");
+		RS.Rola_Pagina(driver, "REGISTER");
 
 		//Endereco
-		RP.dpnbx_Pais().click();
+		RS.dpnbx_Pais().click();
 		
-		RP.Rola_Paises(driver, "Brazil");
+		RS.Rola_Paises(driver, "Brazil");
 		
-		RP.txtbx_Estado().sendKeys("São Paulo");
-		RP.txtbx_Endereco().sendKeys("Rua do Desespero");
-		RP.txtbx_Cidade().sendKeys("Inferno");
-		RP.txtbx_CodigoPostal().sendKeys("99999-999");
+		RS.txtbx_Estado().sendKeys("São Paulo");
+		RS.txtbx_Endereco().sendKeys("Rua do Desespero");
+		RS.txtbx_Cidade().sendKeys("Inferno");
+		RS.txtbx_CodigoPostal().sendKeys("99999-999");
 				
 		//Confirmação Para Cadastrar
 		
-		RP.chkbx_Propagandas().click();
-		RP.btn_Registrar().click();
+		RS.chkbx_Propagandas().click();
+		RS.btn_Registrar().click();
 			
 		Thread.sleep(5000);
 		
 		//wait.until(ExpectedConditions.visibilityOf(HP.bnt_Menu()));
-		HP.bnt_Menu().click();
+		HS.bnt_Menu().click();
 		
-		assertTrue(HP.btn_Deslogar().isEnabled());
+		assertTrue(HS.btn_Deslogar().isEnabled());
 		
 		System.out.println("Chupa essa manga");
 	}
@@ -90,48 +90,48 @@ public class Registro {
 	public void Cadastrar_Usuario_Ja_Existente() throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
-		HP.bnt_Menu().click();
-		HP.bnt_LogIn().click();
-		LP.Novo_Usuario().click();
+		HS.bnt_Menu().click();
+		HS.bnt_LogIn().click();
+		LS.Novo_Usuario().click();
 		
 		System.out.println("Ele abriu o APP e foi para pagina de cadastro");
 
 		//Detalhes da Conta
-		RP.txtbx_NomeUsuario().sendKeys("kaiquefs");
-		RP.txtbx_Email().sendKeys("kaique@hotmail.com");
-		RP.txtbx_Senha().sendKeys("Kaique1");
-		RP.txtbx_ConfirmarSenha().sendKeys("Kaique1");
+		RS.txtbx_NomeUsuario().sendKeys("kaiquefs");
+		RS.txtbx_Email().sendKeys("kaique@hotmail.com");
+		RS.txtbx_Senha().sendKeys("Kaique1");
+		RS.txtbx_ConfirmarSenha().sendKeys("Kaique1");
 					
-		RP.Rola_Pagina(driver, "PHONE NUMBER");
+		RS.Rola_Pagina(driver, "PHONE NUMBER");
 
 		//Detalhes Pessoais
-		RP.txtbx_PrimeiroNome().sendKeys("Kaique");
-		RP.txtbx_UltimoNome().sendKeys("Silva");
-		RP.txtbx_TelefoneNumero().sendKeys("+55 (11) 99353-6566");
+		RS.txtbx_PrimeiroNome().sendKeys("Kaique");
+		RS.txtbx_UltimoNome().sendKeys("Silva");
+		RS.txtbx_TelefoneNumero().sendKeys("+55 (11) 99353-6566");
 						
-		RP.Rola_Pagina(driver, "REGISTER");
+		RS.Rola_Pagina(driver, "REGISTER");
 
 		//Endereco
-		RP.dpnbx_Pais().click();
+		RS.dpnbx_Pais().click();
 		
-		RP.Rola_Paises(driver, "Brazil");
+		RS.Rola_Paises(driver, "Brazil");
 		
-		RP.txtbx_Estado().sendKeys("São Paulo");
-		RP.txtbx_Endereco().sendKeys("Rua do Desespero");
-		RP.txtbx_Cidade().sendKeys("Inferno");
-		RP.txtbx_CodigoPostal().sendKeys("99999-999");
+		RS.txtbx_Estado().sendKeys("São Paulo");
+		RS.txtbx_Endereco().sendKeys("Rua do Desespero");
+		RS.txtbx_Cidade().sendKeys("Inferno");
+		RS.txtbx_CodigoPostal().sendKeys("99999-999");
 				
 		//Confirmação Para Cadastrar
 		
-		RP.chkbx_Propagandas().click();
-		RP.btn_Registrar().click();
+		RS.chkbx_Propagandas().click();
+		RS.btn_Registrar().click();
 			
 		Thread.sleep(5000);
 		
 		//wait.until(ExpectedConditions.visibilityOf(HP.bnt_Menu()));
-		HP.bnt_Menu().click();
+		HS.bnt_Menu().click();
 		
-		assertFalse(HP.btn_Deslogar().isEnabled());
+		assertFalse(HS.btn_Deslogar().isEnabled());
 		
 		System.out.println("Chupa essa manga");
 	}
