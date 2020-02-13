@@ -38,7 +38,7 @@ public class Registro {
 	
 	@Test
 	public void Cadastrar_Usuario() throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		HS.bnt_Menu().click();
 		HS.bnt_LogIn().click();
