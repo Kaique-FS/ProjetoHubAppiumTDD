@@ -45,6 +45,7 @@ public class PesquisaHome {
 		
 		AndroidDriverManager.AbreAndroid();
 		
+		
 		driver = AndroidDriverManager.AbreAndroid();
 		
 		HS = new HomeScreen(AndroidDriverManager.AbreAndroid());
@@ -58,6 +59,7 @@ public class PesquisaHome {
 	
 	@Test
 	public void Pesquisar_Produto_Pela_Pagina_Inicial_Existente() {
+		test = report.createTest("Pesquisa pela tela inicial valido");
 	
 		HS.bnt_Headphones().click();
 		HsS.Produto_3().click();
@@ -70,6 +72,8 @@ public class PesquisaHome {
 	@Test
 	public void Pesquisar_Produto_Pela_Pagina_Inicial_Incorreto() {
 	
+		test = report.createTest("Pesquisa pela tela inicial negativo");
+		
 		HS.bnt_Tablets().click();
 		TS.Produto_2().click();
 		PS.Quantidade().click();

@@ -5,16 +5,27 @@ import static org.junit.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HeadphonesScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HomeScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.LogInScreen;
+import br.com.rsinet.hub.projetoAppiumTDD.screenObject.ProductScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.RegisterScreen;
+import br.com.rsinet.hub.projetoAppiumTDD.screenObject.TabletsScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.utility.AndroidDriverManager;
+import br.com.rsinet.hub.projetoAppiumTDD.utility.Report;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Registro {
@@ -23,16 +34,31 @@ public class Registro {
 	private HomeScreen HS;
 	private LogInScreen LS;
 	private RegisterScreen RS;
+	private HeadphonesScreen HsS;
+	private ProductScreen PS;
+	private TabletsScreen TS;
+	private ExtentReports report;
+	private ExtentTest test;
 
-	@Before
+	@BeforeTest
+	public void inicializaRelatorio() {
+		report = Report.StartReport();
+	}
+	
+	@BeforeMethod
 	public void AbreAPlicacao() throws MalformedURLException,InterruptedException {
 		
 		AndroidDriverManager.AbreAndroid();
+		
+		
 		driver = AndroidDriverManager.AbreAndroid();
 		
 		HS = new HomeScreen(AndroidDriverManager.AbreAndroid());
 		LS = new LogInScreen(AndroidDriverManager.AbreAndroid());
 		RS = new RegisterScreen(AndroidDriverManager.AbreAndroid());
+		HsS = new HeadphonesScreen(AndroidDriverManager.AbreAndroid());
+		PS = new ProductScreen(AndroidDriverManager.AbreAndroid());
+		TS = new TabletsScreen(AndroidDriverManager.AbreAndroid());
 		
 	}
 	
@@ -40,6 +66,8 @@ public class Registro {
 	public void Cadastrar_Usuario() throws Exception {
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		
+		test = report.createTest("Realiza Cadastro de Cliente com sucesso");
+
 		HS.bnt_Menu().click();
 		HS.bnt_LogIn().click();
 		LS.Novo_Usuario().click();
@@ -88,8 +116,10 @@ public class Registro {
 	
 	@Test
 	public void Cadastrar_Usuario_Ja_Existente() throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		
+		test = report.createTest("Realiza Cadastro já existente");
+
 		HS.bnt_Menu().click();
 		HS.bnt_LogIn().click();
 		LS.Novo_Usuario().click();
@@ -136,9 +166,14 @@ public class Registro {
 		System.out.println("Chupa essa manga");
 	}
 	
-	@After
-	public void FechaAPlicacao() {
-
+	@AfterMethod
+	public void testConfigsOff(ITestResult result) throws Exception {
+		Report.CloseTest(result, test, driver);
+	}
+	
+	@AfterTest
+	public void FinalizaAplicacao() {
+		Report.CloseReport(report);
 		AndroidDriverManager.FechaAndroid();
 	}
 	

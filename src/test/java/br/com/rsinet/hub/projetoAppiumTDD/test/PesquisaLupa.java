@@ -5,17 +5,27 @@ import static org.testng.Assert.assertEquals;
 
 import java.net.MalformedURLException;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.WebElement;
 
+import org.openqa.selenium.WebElement;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HeadphonesScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HomeScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.LogInScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.MiceScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.ProductScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.RegisterScreen;
+import br.com.rsinet.hub.projetoAppiumTDD.screenObject.TabletsScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.utility.AndroidDriverManager;
+import br.com.rsinet.hub.projetoAppiumTDD.utility.Report;
 import io.appium.java_client.android.AndroidDriver;
 
 public class PesquisaLupa {
@@ -24,10 +34,19 @@ public class PesquisaLupa {
 	private HomeScreen HS;
 	private LogInScreen LS;
 	private RegisterScreen RS;
-	private MiceScreen MS;
+	private HeadphonesScreen HsS;
 	private ProductScreen PS;
+	private TabletsScreen TS;
+	private MiceScreen MS;
+	private ExtentReports report;
+	private ExtentTest test;
 
-	@Before
+	@BeforeTest
+	public void inicializaRelatorio() {
+		report = Report.StartReport();
+	}
+	
+	@BeforeMethod
 	public void AbreAPlicacao() throws MalformedURLException,InterruptedException {
 		
 		AndroidDriverManager.AbreAndroid();
@@ -37,13 +56,17 @@ public class PesquisaLupa {
 		HS = new HomeScreen(AndroidDriverManager.AbreAndroid());
 		LS = new LogInScreen(AndroidDriverManager.AbreAndroid());
 		RS = new RegisterScreen(AndroidDriverManager.AbreAndroid());
-		MS = new MiceScreen(AndroidDriverManager.AbreAndroid());
+		HsS = new HeadphonesScreen(AndroidDriverManager.AbreAndroid());
 		PS = new ProductScreen(AndroidDriverManager.AbreAndroid());
+		TS = new TabletsScreen(AndroidDriverManager.AbreAndroid());
+		MS = new MiceScreen(AndroidDriverManager.AbreAndroid());
 		
 	}
 	
 	@Test
 	public void Pesquisar_Produto_Pela_Barra_De_Pesquisa() {
+		
+		test = report.createTest("Pesquisa de Produto pela Lupa Existente");
 		
 		HS.txtbx_Lupa().sendKeys("mice");
 		HS.bnt_Lupa().click();
@@ -63,6 +86,8 @@ public class PesquisaLupa {
 	@Test
 	public void Pesquisar_Produto_Pela_Barra_De_Pesquisa_Inexistente() {
 		
+		test = report.createTest("Pesquisa de Produto pela Lupa  Inexistente");
+		
 		HS.txtbx_Lupa().sendKeys("Carregador");
 		HS.bnt_Lupa().click();
 		
@@ -70,9 +95,14 @@ public class PesquisaLupa {
 
 	}
 	
-	@After
-	public void FechaAPlicacao() {
-
+	@AfterMethod
+	public void testConfigsOff(ITestResult result) throws Exception {
+		Report.CloseTest(result, test, driver);
+	}
+	
+	@AfterTest
+	public void FinalizaAplicacao() {
+		Report.CloseReport(report);
 		AndroidDriverManager.FechaAndroid();
 	}
 }
