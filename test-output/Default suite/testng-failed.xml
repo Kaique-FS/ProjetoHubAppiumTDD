@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome">
+        <methods>
+          <include name="Pesquisar_Produto_Pela_Pagina_Inicial_Incorreto"/>
+          <include name="AbreAPlicacao"/>
+          <include name="inicializaRelatorio"/>
+          <include name="FinalizaAplicacao"/>
+          <include name="testConfigsOff"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

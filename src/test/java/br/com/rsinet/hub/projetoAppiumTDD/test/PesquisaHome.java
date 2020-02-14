@@ -2,9 +2,16 @@ package br.com.rsinet.hub.projetoAppiumTDD.test;
 
 import java.net.MalformedURLException;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HeadphonesScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HomeScreen;
@@ -13,20 +20,27 @@ import br.com.rsinet.hub.projetoAppiumTDD.screenObject.ProductScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.RegisterScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.TabletsScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.utility.AndroidDriverManager;
-import io.appium.java_client.MobileElement;
+import br.com.rsinet.hub.projetoAppiumTDD.utility.Report;
 import io.appium.java_client.android.AndroidDriver;
 
 public class PesquisaHome {
 
-	private AndroidDriver<MobileElement> driver;
+	private AndroidDriver<WebElement> driver;
 	private HomeScreen HS;
 	private LogInScreen LS;
 	private RegisterScreen RS;
 	private HeadphonesScreen HsS;
 	private ProductScreen PS;
 	private TabletsScreen TS;
+	private ExtentReports report;
+	private ExtentTest test;
 	
-	@Before
+	@BeforeTest
+	public void inicializaRelatorio() {
+		report = Report.StartReport();
+	}
+	
+	@BeforeMethod
 	public void AbreAPlicacao() throws MalformedURLException,InterruptedException {
 		
 		AndroidDriverManager.AbreAndroid();
@@ -66,9 +80,14 @@ public class PesquisaHome {
 		PS.Adicionar_No_Carrinho().click();	
 	}
 	
-	@After
+	@AfterMethod
+	public void testConfigsOff(ITestResult result) throws Exception {
+		Report.CloseTest(result, test, driver);
+	}
+	
+	@AfterTest
 	public void FinalizaAplicacao() {
-		
+		Report.CloseReport(report);
 		AndroidDriverManager.FechaAndroid();
 	}
 }

@@ -8,18 +8,18 @@ import java.net.MalformedURLException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.HomeScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.LogInScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.screenObject.RegisterScreen;
 import br.com.rsinet.hub.projetoAppiumTDD.utility.AndroidDriverManager;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Registro {
 
-	private AndroidDriver<MobileElement> driver;
+	private AndroidDriver<WebElement> driver;
 	private HomeScreen HS;
 	private LogInScreen LS;
 	private RegisterScreen RS;

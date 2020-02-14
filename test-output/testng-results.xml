@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16145" started-at="2020-02-13T18:02:51 BRT" finished-at="2020-02-13T18:03:07 BRT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16145" started-at="2020-02-13T18:02:51 BRT" finished-at="2020-02-13T18:03:07 BRT">
+      <class name="br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome">
+        <test-method status="PASS" signature="inicializaRelatorio()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="inicializaRelatorio" is-config="true" duration-ms="69" started-at="2020-02-13T18:02:51 BRT" finished-at="2020-02-13T18:02:51 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializaRelatorio -->
+        <test-method status="PASS" signature="AbreAPlicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="AbreAPlicacao" is-config="true" duration-ms="7469" started-at="2020-02-13T18:02:51 BRT" finished-at="2020-02-13T18:02:59 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbreAPlicacao -->
+        <test-method status="PASS" signature="Pesquisar_Produto_Pela_Pagina_Inicial_Existente()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="Pesquisar_Produto_Pela_Pagina_Inicial_Existente" duration-ms="8037" started-at="2020-02-13T18:02:59 BRT" finished-at="2020-02-13T18:03:07 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Pesquisar_Produto_Pela_Pagina_Inicial_Existente -->
+        <test-method status="FAIL" signature="testConfigsOff(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="testConfigsOff" is-config="true" duration-ms="524" started-at="2020-02-13T18:03:07 BRT" finished-at="2020-02-13T18:03:07 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Pesquisar_Produto_Pela_Pagina_Inicial_Existente status=SUCCESS method=PesquisaHome.Pesquisar_Produto_Pela_Pagina_Inicial_Existente()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at br.com.rsinet.hub.projetoAppiumTDD.utility.Report.CloseTest(Report.java:65)
+at br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome.testConfigsOff(PesquisaHome.java:85)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigsOff -->
+        <test-method status="SKIP" signature="AbreAPlicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="AbreAPlicacao" is-config="true" duration-ms="-1581627787816" started-at="2020-02-13T18:03:07 BRT" finished-at="1969-12-31T21:00:00 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbreAPlicacao -->
+        <test-method status="SKIP" signature="Pesquisar_Produto_Pela_Pagina_Inicial_Incorreto()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="Pesquisar_Produto_Pela_Pagina_Inicial_Incorreto" duration-ms="0" started-at="2020-02-13T18:03:07 BRT" finished-at="2020-02-13T18:03:07 BRT">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at br.com.rsinet.hub.projetoAppiumTDD.utility.Report.CloseTest(Report.java:65)
+at br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome.testConfigsOff(PesquisaHome.java:85)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Pesquisar_Produto_Pela_Pagina_Inicial_Incorreto -->
+        <test-method status="SKIP" signature="testConfigsOff(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="testConfigsOff" is-config="true" duration-ms="-1581627787824" started-at="2020-02-13T18:03:07 BRT" finished-at="1969-12-31T21:00:00 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigsOff -->
+        <test-method status="SKIP" signature="FinalizaAplicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome@76b0bfab]" name="FinalizaAplicacao" is-config="true" duration-ms="-1581627787829" started-at="2020-02-13T18:03:07 BRT" finished-at="1969-12-31T21:00:00 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinalizaAplicacao -->
+      </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
