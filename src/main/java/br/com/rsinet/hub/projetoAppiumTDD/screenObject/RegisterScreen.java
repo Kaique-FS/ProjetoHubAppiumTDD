@@ -93,7 +93,7 @@ public class RegisterScreen {
 		WebElement btn_UsarLocalizacao = driver.findElementById("com.Advantage.aShopping:id/switchLocation");
 		return btn_UsarLocalizacao;
 	}
-	
+
 	// CheckBox e Registro
 	
 	public WebElement chkbx_Propagandas() {

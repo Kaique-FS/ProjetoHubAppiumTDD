@@ -2,59 +2,38 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="74131" started-at="2020-02-14T12:51:38 BRT" finished-at="2020-02-14T12:52:52 BRT">
+  <suite name="Default suite" duration-ms="49206" started-at="2020-02-14T13:32:43 BRT" finished-at="2020-02-14T13:33:32 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="74131" started-at="2020-02-14T12:51:38 BRT" finished-at="2020-02-14T12:52:52 BRT">
-      <class name="br.com.rsinet.hub.projetoAppiumTDD.test.Registro">
-        <test-method status="PASS" signature="inicializaRelatorio()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="inicializaRelatorio" is-config="true" duration-ms="215" started-at="2020-02-14T12:51:38 BRT" finished-at="2020-02-14T12:51:38 BRT">
+    <test name="Default test" duration-ms="49206" started-at="2020-02-14T13:32:43 BRT" finished-at="2020-02-14T13:33:32 BRT">
+      <class name="br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa">
+        <test-method status="PASS" signature="inicializaRelatorio()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="inicializaRelatorio" is-config="true" duration-ms="149" started-at="2020-02-14T13:32:43 BRT" finished-at="2020-02-14T13:32:43 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicializaRelatorio -->
-        <test-method status="PASS" signature="AbreAPlicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="AbreAPlicacao" is-config="true" duration-ms="14820" started-at="2020-02-14T12:51:38 BRT" finished-at="2020-02-14T12:51:53 BRT">
+        <test-method status="PASS" signature="AbreAPlicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="AbreAPlicacao" is-config="true" duration-ms="12901" started-at="2020-02-14T13:32:43 BRT" finished-at="2020-02-14T13:32:56 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AbreAPlicacao -->
-        <test-method status="PASS" signature="Cadastrar_Usuario()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="Cadastrar_Usuario" duration-ms="44399" started-at="2020-02-14T12:51:53 BRT" finished-at="2020-02-14T12:52:37 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Cadastrar_Usuario -->
-        <test-method status="PASS" signature="testConfigsOff(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="testConfigsOff" is-config="true" duration-ms="915" started-at="2020-02-14T12:52:37 BRT" finished-at="2020-02-14T12:52:38 BRT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cadastrar_Usuario status=SUCCESS method=Registro.Cadastrar_Usuario()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testConfigsOff -->
-        <test-method status="PASS" signature="AbreAPlicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="AbreAPlicacao" is-config="true" duration-ms="0" started-at="2020-02-14T12:52:38 BRT" finished-at="2020-02-14T12:52:38 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AbreAPlicacao -->
-        <test-method status="FAIL" signature="Cadastrar_Usuario_Ja_Existente()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="Cadastrar_Usuario_Ja_Existente" duration-ms="11455" started-at="2020-02-14T12:52:38 BRT" finished-at="2020-02-14T12:52:50 BRT">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="Pesquisar_Produto_Pela_Barra_De_Pesquisa()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="Pesquisar_Produto_Pela_Barra_De_Pesquisa" duration-ms="17494" started-at="2020-02-14T13:32:56 BRT" finished-at="2020-02-14T13:33:14 BRT">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'RSI1525', ip: '10.1.11.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, databaseEnabled: false, desired: {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, deviceName: AOSP on IA Emulator, platformName: android, platformVersion: 9}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: e7f547f7-da48-4522-8833-168c0c3c5d6f
-*** Element info: {Using=id, value=com.Advantage.aShopping:id/textViewDontHaveAnAccount}]]>
+Session ID: 7ea099a2-30de-42ef-ae14-b40c85cf73a1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'RSI1525', ip: '10.1.11.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, databaseEnabled: false, desired: {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, deviceName: AOSP on IA Emulator, platformName: android, platformVersion: 9}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: e7f547f7-da48-4522-8833-168c0c3c5d6f
-*** Element info: {Using=id, value=com.Advantage.aShopping:id/textViewDontHaveAnAccount}
+Session ID: 7ea099a2-30de-42ef-ae14-b40c85cf73a1
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -68,16 +47,13 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-at br.com.rsinet.hub.projetoAppiumTDD.screenObject.LogInScreen.Novo_Usuario(LogInScreen.java:16)
-at br.com.rsinet.hub.projetoAppiumTDD.test.Registro.Cadastrar_Usuario_Ja_Existente(Registro.java:125)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+at br.com.rsinet.hub.projetoAppiumTDD.screenObject.ProductScreen.Valida_Nome_Produto(ProductScreen.java:66)
+at br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa.Pesquisar_Produto_Pela_Barra_De_Pesquisa(PesquisaLupa.java:83)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -108,26 +84,45 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Cadastrar_Usuario_Ja_Existente -->
-        <test-method status="PASS" signature="testConfigsOff(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="testConfigsOff" is-config="true" duration-ms="640" started-at="2020-02-14T12:52:50 BRT" finished-at="2020-02-14T12:52:50 BRT">
+        </test-method> <!-- Pesquisar_Produto_Pela_Barra_De_Pesquisa -->
+        <test-method status="PASS" signature="testConfigsOff(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="testConfigsOff" is-config="true" duration-ms="1899" started-at="2020-02-14T13:33:14 BRT" finished-at="2020-02-14T13:33:16 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cadastrar_Usuario_Ja_Existente status=FAILURE method=Registro.Cadastrar_Usuario_Ja_Existente()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7] output={null}]]]>
+                <![CDATA[[TestResult name=Pesquisar_Produto_Pela_Barra_De_Pesquisa status=FAILURE method=PesquisaLupa.Pesquisar_Produto_Pela_Barra_De_Pesquisa()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConfigsOff -->
-        <test-method status="PASS" signature="FinalizaAplicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.Registro@d35dea7]" name="FinalizaAplicacao" is-config="true" duration-ms="1613" started-at="2020-02-14T12:52:50 BRT" finished-at="2020-02-14T12:52:52 BRT">
+        <test-method status="PASS" signature="AbreAPlicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="AbreAPlicacao" is-config="true" duration-ms="11360" started-at="2020-02-14T13:33:16 BRT" finished-at="2020-02-14T13:33:27 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbreAPlicacao -->
+        <test-method status="PASS" signature="Pesquisar_Produto_Pela_Barra_De_Pesquisa_Inexistente()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="Pesquisar_Produto_Pela_Barra_De_Pesquisa_Inexistente" duration-ms="3411" started-at="2020-02-14T13:33:27 BRT" finished-at="2020-02-14T13:33:30 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Pesquisar_Produto_Pela_Barra_De_Pesquisa_Inexistente -->
+        <test-method status="PASS" signature="testConfigsOff(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="testConfigsOff" is-config="true" duration-ms="1380" started-at="2020-02-14T13:33:30 BRT" finished-at="2020-02-14T13:33:32 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Pesquisar_Produto_Pela_Barra_De_Pesquisa_Inexistente status=SUCCESS method=PesquisaLupa.Pesquisar_Produto_Pela_Barra_De_Pesquisa_Inexistente()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConfigsOff -->
+        <test-method status="PASS" signature="FinalizaAplicacao()[pri:0, instance:br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa@d35dea7]" name="FinalizaAplicacao" is-config="true" duration-ms="547" started-at="2020-02-14T13:33:32 BRT" finished-at="2020-02-14T13:33:32 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FinalizaAplicacao -->
-      </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.Registro -->
+      </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -62,8 +62,7 @@ public class ProductScreen {
 		return txtbx_ConfirmaProduto;
 	}
 	
-	public WebElement Valida_Nome_Produto() {
-		WebElement txtbx_ValidaNomeProduto = driver.findElementById("com.Advantage.aShopping:id/textViewProductName");
-		return txtbx_ValidaNomeProduto;
+	public String Valida_Nome_Produto() {
+		return driver.findElementById("com.Advantage.aShopping:id/textViewProductName").getText();
 	}
 }

@@ -78,8 +78,6 @@ public class PesquisaLupa {
 		PS.Quantidade_Mais().click();
 		PS.Aplica_Quantidade().click();
 		
-		PS.Adicionar_No_Carrinho().click();
-		
 		assertEquals(PS.Valida_Nome_Produto(), "MICROSOFT SCULPT TOUCH MOUSE");
 	}
 	
@@ -98,11 +96,12 @@ public class PesquisaLupa {
 	@AfterMethod
 	public void testConfigsOff(ITestResult result) throws Exception {
 		Report.CloseTest(result, test, driver);
+		AndroidDriverManager.FechaAndroid();
+
 	}
 	
 	@AfterTest
 	public void FinalizaAplicacao() {
 		Report.CloseReport(report);
-		AndroidDriverManager.FechaAndroid();
 	}
 }

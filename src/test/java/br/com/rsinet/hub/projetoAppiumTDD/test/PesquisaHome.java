@@ -66,7 +66,7 @@ public class PesquisaHome {
 		PS.Quantidade().click();
 		PS.Quantidade_Mais().click();
 		PS.Aplica_Quantidade().click();
-		PS.Adicionar_No_Carrinho().click();	
+
 	}
 	
 	@Test
@@ -81,7 +81,7 @@ public class PesquisaHome {
 		PS.Digita_Quantidade().clear();
 		PS.Digita_Quantidade().sendKeys("21");
 		PS.Aplica_Quantidade().click();
-		PS.Adicionar_No_Carrinho().click();	
+
 	}
 	
 	@AfterMethod

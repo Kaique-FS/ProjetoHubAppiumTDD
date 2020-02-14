@@ -169,12 +169,13 @@ public class Registro {
 	@AfterMethod
 	public void testConfigsOff(ITestResult result) throws Exception {
 		Report.CloseTest(result, test, driver);
+		AndroidDriverManager.FechaAndroid();
+
 	}
 	
 	@AfterTest
 	public void FinalizaAplicacao() {
 		Report.CloseReport(report);
-		AndroidDriverManager.FechaAndroid();
 	}
 	
 }
