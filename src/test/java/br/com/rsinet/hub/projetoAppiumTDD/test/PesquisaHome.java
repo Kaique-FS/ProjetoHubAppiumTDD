@@ -1,5 +1,7 @@
 package br.com.rsinet.hub.projetoAppiumTDD.test;
 
+import static org.testng.Assert.assertEquals;
+
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.WebElement;
@@ -67,6 +69,7 @@ public class PesquisaHome {
 		PS.Quantidade_Mais().click();
 		PS.Aplica_Quantidade().click();
 
+		assertEquals(PS.Valida_Nome_Produto(), "HP H2310 IN-EAR HEADSET");
 	}
 	
 	@Test
@@ -87,11 +90,12 @@ public class PesquisaHome {
 	@AfterMethod
 	public void testConfigsOff(ITestResult result) throws Exception {
 		Report.CloseTest(result, test, driver);
+		AndroidDriverManager.FechaAndroid();
+
 	}
 	
 	@AfterTest
 	public void FinalizaAplicacao() {
 		Report.CloseReport(report);
-		AndroidDriverManager.FechaAndroid();
 	}
 }
