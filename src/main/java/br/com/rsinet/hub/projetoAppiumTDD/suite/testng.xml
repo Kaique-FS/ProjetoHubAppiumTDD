@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite Testes Mobile AdvantageDemo">
+	<test
+		name="Funcionalidades Cadastro de novo usuario, Pesquisa de Produto pela pagina Inicial, Pesquisa de produto pelo campo de pesquisa">
+		
+		<classes>
+			<class 
+				name="br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaHome" />
+			<class
+				name="br.com.rsinet.hub.projetoAppiumTDD.test.PesquisaLupa" />
+			<class
+				name="br.com.rsinet.hub.projetoAppiumTDD.test.RegistroExcel" />
+				
+		</classes>
+	</test>
+</suite>

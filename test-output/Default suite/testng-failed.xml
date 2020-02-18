@@ -3,16 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub.projetoAppiumTDD.test.Registro">
+      <class name="br.com.rsinet.hub.projetoAppiumTDD.test.RegistroExcel">
         <methods>
+          <include name="inicializaRelatorio"/>
+          <include name="testConfigsOff"/>
           <include name="Cadastrar_Usuario_Ja_Existente"/>
           <include name="AbreAPlicacao"/>
           <include name="FinalizaAplicacao"/>
-          <include name="testConfigsOff"/>
-          <include name="Cadastrar_Usuario"/>
-          <include name="inicializaRelatorio"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.Registro -->
+      </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.RegistroExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
