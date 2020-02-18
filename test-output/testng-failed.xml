@@ -9,6 +9,7 @@
           <include name="AbreAPlicacao"/>
           <include name="FinalizaAplicacao"/>
           <include name="testConfigsOff"/>
+          <include name="Cadastrar_Usuario"/>
           <include name="inicializaRelatorio"/>
         </methods>
       </class> <!-- br.com.rsinet.hub.projetoAppiumTDD.test.Registro -->
